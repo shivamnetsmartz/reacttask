@@ -8,7 +8,7 @@ function DataFetch() {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('https://fakestoreapi.com/products')
             .then(res => {
                 console.log(res)
                 setUsers(res.data)
@@ -27,7 +27,7 @@ function DataFetch() {
 
         <div className="table-container">
 
-            <h1 className="heading">Records of Users</h1>
+            <h1 className="heading">Records of Products</h1>
             {
                 users.map(user =>
                     <table className="table">

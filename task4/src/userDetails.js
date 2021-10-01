@@ -13,7 +13,7 @@ export default function UserDetails() {
    
 
     const getUser = async () => {
-        const res=await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        const res=await axios.get(`https://fakestoreapi.com/products/${id}`);
         console.log(res)
        
    setUser(res.data)
@@ -24,7 +24,7 @@ return (
 
     <div className="container py-4">
 
-        <h1 className="display-4">User Id: {id}</h1>
+        <h1 className="display-4">Product Id: {id}</h1>
         <hr />
       
         <ul className="list-group w-50">
