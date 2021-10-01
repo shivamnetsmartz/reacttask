@@ -10,6 +10,7 @@ export default function UserDetails() {
        await getUser();
         console.log(user);
     }, []);
+   
 
     const getUser = async () => {
         const res=await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -18,6 +19,7 @@ export default function UserDetails() {
    setUser(res.data)
    
     }
+
 return (
 
     <div className="container py-4">
@@ -27,7 +29,7 @@ return (
       
         <ul className="list-group w-50">
        
-            <li className="list-group-item">userId:{user.userId}</li>
+            <li className="list-group-item">id:{user.id}</li>
             <li className="list-group-item">title: {user.title}</li>
            
        

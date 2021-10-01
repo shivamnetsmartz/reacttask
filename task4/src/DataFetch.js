@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axios from 'axios'
 
 
@@ -18,32 +18,46 @@ function DataFetch() {
             })
     }, [])
 
+    let history = useHistory();
+
+    console.log(history)
+
 
     return (
 
-            <div>
+        <div className="table-container">
 
-                <h1>Records of Users</h1>
-                {
-                    users.map(user => 
-                    <table>
-                      <tr>
-                          <th>ID</th>
-                          <th>NAME</th>
-                      </tr>
-                      <tr>
-                          <td>{user.id}</td>  
-                          <td>{user.title}</td>
-                         
-                     </tr>
-                     <Link className="btn btn-primary"to={`/userDetails/${user.id}`}>Get Details</Link>
+            <h1 className="heading">Records of Users</h1>
+            {
+                users.map(user =>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>GET BUTTON</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="id">{user.id}</td> <td data-label="title">{user.title}</td>
+                               
+                                <td data-label="button">  <button className="btn btn-primary" onClick={() => {
+
+                                    history.push(`/userDetails/${user.id}`)
+                                }}>Get Details</button></td>
+
+                            </tr>
+
+
+                        </tbody>
                     </table>,
-    
-                    
-                    )
-                }
-            </div>
-       
+
+
+                )
+            }
+        </div>
+
     )
 }
 

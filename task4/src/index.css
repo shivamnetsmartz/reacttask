@@ -22,7 +22,52 @@ button{
   text-transform: uppercase;
   cursor: pointer;
 }
-table{
-  margin: 33px 415px 4px 212px  !important;
-  width: 50%;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.table-container{
+  padding: 0 4%;
+  margin: 40px 10px 0;
+}
+
+.heading{
+  font-size: 40px;
+  text-align: center;
+  color:rgb(34, 85, 82);
+  margin-bottom: 20px;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead tr th{
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color:white;
+  background-color: rgb(34, 85, 82);
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border:1px solid black
+}
+
+.table tbody tr td{
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: black;
+  
+  padding: 8px;
+  text-align: center;
+  border: 1px solid black;
+}
+.btn-primary{
+  background-color: rgb(34, 85, 82) !important;
 }
