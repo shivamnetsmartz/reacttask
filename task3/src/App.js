@@ -6,7 +6,7 @@ function App() {
 
   useEffect(()=>{
     document.title = `you clicked ${count} times`;
-  });
+  },[count]);
   return (
     <div className="App">
     you clicked {count} time<br />
